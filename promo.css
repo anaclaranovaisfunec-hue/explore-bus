@@ -1,0 +1,157 @@
+/* ===================================================
+   promo.css — Estilo da página "Promoção" (oculta)
+   EXPLORE BUS
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================================
+   HEADER — sem menu de navegação (página oculta)
+   =================================================== */
+header {
+  background-color: #1a4d7a;
+  padding: 22px 60px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo (nome da empresa no header) */
+.logo {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Nome da empresa em cinza centralizado */
+.empresa-nome {
+  font-size: 52px;
+  font-weight: 700;
+  color: #aaaaaa;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+
+/* ===== BLOCO DO FORMULÁRIO (direita) ===== */
+.formulario-bloco {
+  flex: 1;
+  border: 1.5px solid #cccccc;
+  border-radius: 8px;
+  padding: 35px;
+}
+
+/* Título "Garante sua vaga" */
+.form-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a4d7a;
+  margin-bottom: 25px;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-promo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grupo: etiqueta + campo */
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-grupo label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.campo-grupo input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cccccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background: #fafafa;
+  outline: none;
+}
+
+/* Botão de envio */
+.btn-enviar {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a4d7a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+/* ===================================================
+   FOOTER — igual às outras páginas
+   =================================================== */
+footer {
+  background-color: #1a4d7a;
+  padding: 28px 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  color: #B3E5FC;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ===================================================
+   RESPONSIVIDADE — celular
+   =================================================== */
+@media (max-width: 768px) {
+  header         { padding: 18px 25px; }
+  main           { padding: 30px 20px 40px; }
+  .empresa-nome  { font-size: 32px; margin-bottom: 28px; }
+  /* Empilha oferta e formulário */
+  .promo-secao   { flex-direction: column; gap: 30px; }
+  footer         { padding: 22px 20px; }
+  .footer-content { flex-direction: column; gap: 14px; text-align: center; }
+}

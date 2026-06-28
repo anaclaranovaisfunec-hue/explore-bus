@@ -1,0 +1,126 @@
+/* ===================================================
+   welcome.css — Estilo da página inicial (index.html)
+   EXPLORE BUS
+   =================================================== */
+
+/* Importa a fonte Montserrat do Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* ===== RESET ===== */
+/* Remove margens e espaços que o navegador coloca por padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+/* display flex + flex-direction column = empilha header, main e footer */
+/* min-height 100vh = ocupa 100% da altura da janela */
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* ===================================================
+   HEADER — barra azul escura no topo
+   =================================================== */
+header {
+  background-color: #1a4d7a;
+  padding: 22px 60px;
+}
+
+/* Coloca os dois links nas extremidades (esquerda e direita) */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Links SOBRE NÓS e CONTATO */
+.nav-link {
+  color: #fff;
+  text-decoration: none; /* sem sublinhado */
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ===================================================
+   MAIN — cresce para preencher o espaço entre header e footer
+   =================================================== */
+main {
+  flex: 1; /* ocupa todo o espaço disponível */
+  display: flex;
+}
+
+/* ===================================================
+   SEÇÃO CAPA — foto grande que preenche toda a tela
+   =================================================== */
+.capa {
+  flex: 1;
+  width: 100%;
+
+  /* Foto de fundo de Gramado */
+  background:
+    url('https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-gramado-capa2019-04-820x430.jpg')
+    center / cover no-repeat;
+    /* center = centraliza a foto | cover = preenche sem cortar */
+
+  /* Centraliza o nome da empresa na foto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+}
+
+/* Nome EXPLORE BUS escrito sobre a foto */
+.capa-nome {
+  font-size: 72px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 4px;
+  /* text-shadow = sombra escura para o texto ser legível sobre a foto */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* ===================================================
+   FOOTER — barra azul escura no rodapé
+   =================================================== */
+footer {
+  background-color: #1a4d7a;
+  padding: 28px 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* espaço entre os itens */
+  flex-wrap: wrap; /* quebra linha em telas menores */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  color: #B3E5FC; /* azul claro */
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ===================================================
+   RESPONSIVIDADE — celular
+   =================================================== */
+@media (max-width: 768px) {
+  header        { padding: 18px 25px; }
+  .nav-link     { font-size: 15px; }
+  .capa-nome    { font-size: 38px; letter-spacing: 2px; }
+  .capa         { min-height: 320px; }
+  footer        { padding: 22px 20px; }
+  .footer-content { flex-direction: column; gap: 14px; text-align: center; }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — EXPLORE BUS</title>
+
+  <!-- Importa a fonte Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS desta página -->
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header>
+    <div class="header-content">
+      <a class="nav-link" href="sobre.html">SOBRE NÓS</a>
+      <a class="nav-link" href="contato.html">CONTATO</a>
+    </div>
+  </header>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- Nome da empresa em cinza, centralizado — igual à página Sobre -->
+    <h1 class="empresa-nome">EXPLORE BUS</h1>
+
+    <!-- ===== SEÇÃO DO FORMULÁRIO ===== -->
+    <section class="contato-secao">
+
+      <!-- Título da seção -->
+      <h2 class="contato-titulo">Entre em contato</h2>
+
+      <!--
+        Formulário de contato
+        action="#" = não envia para nenhum servidor por enquanto
+        method="post" = método padrão de formulários HTML
+      -->
+      <form action="#" method="post" class="form-contato">
+
+        <!-- ===== CAMPO: NOME ===== -->
+        <!-- label for="nome" liga a etiqueta ao input com id="nome" -->
+        <div class="campo-grupo">
+          <label for="nome">Nome</label>
+          <!-- type="text" = campo de texto simples -->
+          <!-- required = campo obrigatório, não pode enviar vazio -->
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        </div>
+
+        <!-- ===== CAMPO: DESTINO ===== -->
+        <div class="campo-grupo">
+          <label for="destino">Destino</label>
+          <input type="text" id="destino" name="destino" placeholder="Para onde quer ir?" required>
+        </div>
+
+        <!-- ===== CAMPO: MENSAGEM ===== -->
+        <div class="campo-grupo">
+          <label for="mensagem">Mensagem</label>
+          <!-- textarea = caixa de texto maior para mensagens longas -->
+          <!-- rows="5" = altura de 5 linhas -->
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+
+        <!-- ===== BOTÃO ENVIAR ===== -->
+        <!-- type="submit" = envia o formulário ao clicar -->
+        <button type="submit" class="btn-enviar">Enviar</button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <div class="footer-content">
+      <span class="footer-text">📞 +55 31 0000-0000 (Leonardo)</span>
+      <span class="footer-text">✉️ explore.bus@gmail.com</span>
+      <span class="footer-text">📍 Belo Horizonte - MG</span>
+    </div>
+  </footer>
+
+</body>
+</html>
